@@ -42,9 +42,36 @@ const addBook = event => {
   event.target.reset();
 };
 
+const handleBookDelete = (li, book) => {
+  books = books.filter(b => b.title !== book.title); // return all books 
+  saveToLocalStorage();
+  booksList.removeChild(li);
+};
+const handleUpdate = (li, h2, updateButton, book) => {
+  const titleInput = document.createElement('input');
+  const doneButton = document.createElement('button');
+  doneButton.textContent = 'done';
+  titleInput.type = 'text';
+  titleInput.value = h2.textContent;
+  doneButton.addEventListener('click', () => {
+    const newTitle = titleInput.value;
+    const oldTitle = book.title;
+    h2.textContent = newTitle;
+    books = books.map(b => {
+      if (b.title === oldTitle) {
+        return { ...b, title: newTitle };
+        // return { title: newTitle, isRead: b.isRead, date: b.date };
+      } else {
+        return b;
+      }
+    });
+    saveToLocalStorage();
+    li.replaceChild(h2, titleInput);
+    li.replaceChild(updateButton, doneButton);
+  });
 
-const bookButtonHandler = () => {
-  console.log('I was clicked!!!!');
+  li.replaceChild(titleInput, h2);
+  li.replaceChild(doneButton, updateButton);
 };
 //#3
 const createBookEle = book => {
@@ -52,22 +79,25 @@ const createBookEle = book => {
   const li = document.createElement('li');
   const h2 = document.createElement('h2');
   const p = document.createElement('p');
-  const button = document.createElement('button');
+  const deleteButton = document.createElement('button');
+  const updateButton = document.createElement('button');
   h2.textContent = book.title;
   p.textContent = book.date;
-  button.textContent = 'clickMe';
+  deleteButton.textContent = 'delete';
+  updateButton.textContent = 'update';
   p.style.color = book.isRead ? 'green' : 'red';
-  button.addEventListener('click', bookButtonHandler);
+  deleteButton.addEventListener('click', () => handleBookDelete(li, book));
+  updateButton.addEventListener('click', () => handleUpdate(li, h2, updateButton, book));
   li.append(h2);
   li.append(p);
-  li.append(button);
+  li.append(deleteButton);
+  li.append(updateButton);
   return li;
 };
 // #2
 const render = () => {
   booksList.innerHTML = '';
   books.forEach(book => {
-    console.log('BOOK??', book);
     // #3
     const listItem = createBookEle(book);
     booksList.append(listItem);
