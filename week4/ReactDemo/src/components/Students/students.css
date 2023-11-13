@@ -1,0 +1,8 @@
+.student {
+  color: green;
+}
+
+.not-student {
+  color: red;
+  text-decoration: line-through;
+}
