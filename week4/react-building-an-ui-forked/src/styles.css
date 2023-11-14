@@ -1,0 +1,189 @@
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+  background: #007398;
+  color: white;
+  padding: 0 30px;
+}
+
+.block {
+  text-align: center;
+  background: white;
+  border-radius: 3px;
+  padding: 3%;
+  color: black;
+  margin: 2%;
+  width: 95%;
+}
+.block > h2 {
+  text-align: center;
+}
+.bonus {
+  width: 90%;
+  padding: 0% 3%;
+}
+p {
+  padding: 5px;
+}
+ul li {
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 1%;
+  text-align: left;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+a.link {
+  color: cornflowerblue;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid cornflowerblue;
+  padding: 5px 10px;
+  margin: 15px;
+  max-width: 100px;
+  min-width: 50px;
+  display: inline-block;
+  border-radius: 3px;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 400px;
+}
+
+.animalContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.cardsContainer {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ebebeb;
+  border-radius: 5px;
+  padding: 2%;
+  width: min(90%, 35ch);
+}
+.card > img {
+  width: 100%;
+  border-radius: 5px;
+  height: 200px;
+  object-fit: cover;
+}
+.card > h4 {
+  margin: 5% 2% 2%;
+}
+.card > p {
+  text-align: justify;
+  margin: 2%;
+}
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form {
+  max-width: 700px;
+  height: 400px;
+  padding: 3%;
+  background-color: #ebebeb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+  border: 1px rgba(0, 0, 0, 0.328) solid;
+  border-radius: 5px;
+}
+
+.form > div {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.textarea {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-around;
+}
+
+.form > div > textarea {
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-top: 4%;
+  resize: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form > button {
+  margin: 1%;
+}
+
+.goal {
+  background-color: #e0e0e0;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+button {
+  background: #007398;
+  color: white;
+  font-weight: bold;
+  padding: 10px 10px;
+  margin: 20px 20px;
+  cursor: pointer;
+  border: 1px solid #007398;
+  border-radius: 5px;
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+input {
+  padding: 0.3rem;
+  border-radius: 5px 5px 0 0;
+  border: none;
+  border-bottom: 1px solid grey;
+  background-color: inherit;
+  outline: none;
+}
+
+.exampleImg {
+  border: 2px solid #007398;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 3px;
+  max-width: 40%;
+  object-fit: contain;
+}
