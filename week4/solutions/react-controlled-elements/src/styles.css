@@ -1,0 +1,154 @@
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+  background: #007398;
+  color: white;
+  padding: 0 30px;
+}
+
+.block {
+  text-align: center;
+  background: white;
+  border-radius: 3px;
+  padding: 3%;
+  color: black;
+  margin: 2% auto;
+  width: 95%;
+}
+.block > h2 {
+  text-align: center;
+}
+
+form > fieldset {
+  height: 120px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3%;
+  border-radius: 5px;
+}
+form > fieldset > div {
+  height: 80px;
+  width: 40%;
+  padding: 1%;
+  margin-bottom: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+form > fieldset > button {
+  margin-bottom: 5%;
+}
+
+.bonus {
+  width: 90%;
+  padding: 0% 3%;
+}
+
+p {
+  padding: 5px;
+}
+
+ul li {
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: left;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+a.link {
+  color: cornflowerblue;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid cornflowerblue;
+  padding: 5px 10px;
+  margin: 20px;
+  padding: 5px 10px;
+  margin: 15px;
+  width: 100px;
+  display: inline-block;
+  border-radius: 3px;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 400px;
+}
+
+.goal {
+  background-color: #e0e0e0;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+button {
+  background: #007398;
+  color: white;
+  font-weight: bold;
+  padding: 10px 10px;
+  margin: 20px 20px;
+  cursor: pointer;
+  border: 1px solid #007398;
+  border-radius: 5px;
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.card {
+  background-color: #ebebeb;
+  border-radius: 0.5em;
+  padding: 0.5rem 1rem 1.5rem;
+  width: 25ch;
+  margin: 1rem 0;
+}
+
+.imgWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+img {
+  border: 2px solid #007398;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 3px;
+  max-width: 40%;
+  object-fit: contain;
+}
+
+.low {
+  background-color: rgb(188, 240, 140);
+}
+.medium {
+  background-color: rgba(255, 255, 0, 0.425);
+}
+.high {
+  background-color: rgba(247, 90, 90, 0.35);
+}
+.true {
+  background-color: gray;
+  text-decoration: line-through;
+}

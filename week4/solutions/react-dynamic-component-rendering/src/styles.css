@@ -1,0 +1,113 @@
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+  background: #007398;
+  color: white;
+  padding: 0 30px;
+}
+
+.block {
+  text-align: center;
+  background: white;
+  border-radius: 3px;
+  padding: 3%;
+  color: black;
+  margin: 2%;
+  width: 95%;
+}
+ul li {
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: left;
+}
+
+.linkWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+a.link {
+  color: cornflowerblue;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid cornflowerblue;
+  padding: 5px 10px;
+  margin: 20px;
+  display: inline-block;
+  border-radius: 3px;
+}
+
+.goal {
+  background-color: #e0e0e0;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+button {
+  background: #007398;
+  color: white;
+  font-weight: bold;
+  padding: 10px 10px;
+  margin: 20px 20px;
+  cursor: pointer;
+  border: 1px solid #007398;
+  border-radius: 5px;
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.imgWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.exampleImg {
+  border: 2px solid #007398;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 3px;
+  max-width: 40%;
+  object-fit: contain;
+}
+
+.userProfile {
+  display: flex;
+  margin: 1rem auto;
+  gap: 1rem;
+  text-align: left;
+  background-color: #ebebeb;
+  border-radius: 10px;
+  width: min(95%, 600px);
+  overflow: hidden;
+}
+
+.userProfile:hover {
+  scale: 1.01;
+  cursor: pointer;
+  transition: scale 0.2s ease-in-out;
+}
+
+.userProfile > img {
+  object-fit: cover;
+  display: block;
+}
+
+.userProfile > div {
+  padding: 0.5rem;
+}
+
+.userProfile > div > * {
+  line-height: 1.6rem;
+  margin: 0;
+}
