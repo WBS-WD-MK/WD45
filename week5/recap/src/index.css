@@ -5,10 +5,12 @@
 }
 header {
   background-color: aquamarine;
+  color: rebeccapurple;
 }
 nav {
   display: flex;
   align-items: center;
+  margin: 0 40px;
 }
 nav img {
   height: 75px;
@@ -27,9 +29,55 @@ body {
 }
 
 main {
-  display: flex;
-  align-content: space-around;
-  gap: 3rem;
+  display: grid;
+  margin: 10px 40px 85px 40px;
+  grid-template-columns: 1fr;
+  grid-template-areas: 'main' 'image-list';
+}
+section.imageView {
+  grid-area: main;
+}
+
+aside {
+  grid-area: image-list;
+  border: 2px solid rebeccapurple;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+aside div h2 {
+  margin-bottom: 20px;
+}
+aside div {
+  margin-bottom: 20px;
+  padding: 10px;
+}
+aside div:hover {
+  background-color: aquamarine;
+  border-radius: 10px;
+}
+@media (min-width: 900px) {
+  main {
+    grid-template-columns: 1fr 300px; /* Adjust the column widths as needed */
+    grid-template-rows: auto;
+    grid-template-areas: 'main image-list';
+  }
+  .imageView img {
+    width: 500px;
+  }
+}
+
+footer {
+  background-color: aquamarine;
+  color: rebeccapurple;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
   width: 100%;
-  margin: 0 auto;
+  height: 75px;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

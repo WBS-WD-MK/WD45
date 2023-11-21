@@ -1,9 +1,9 @@
 const ImageView = ({ image }) => {
   return (
-    <div>
+    <section className="imageView">
+      <img src={image.src} alt={image.title} />
       <h2>{image.title}</h2>
-      <img src={image.src} alt={image.title} width={500} />
-    </div>
+    </section>
   );
 };
 

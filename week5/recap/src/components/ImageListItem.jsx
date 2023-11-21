@@ -5,7 +5,7 @@ const ImageListItem = ({ image, setCurrentImage }) => {
   return (
     <div onClick={handleClick}>
       <h2>{image.title}</h2>
-      <img src={image.src} alt={image.title} width={200} height={100} />
+      <img src={image.src} alt={image.title} width={200} height={200} />
     </div>
   );
 };

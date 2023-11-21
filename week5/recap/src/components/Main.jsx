@@ -1,16 +1,17 @@
 import ImageView from './ImageView';
 import ImageList from './ImageList';
+import { v4 as uuidv4 } from 'uuid';
 import { useState, useEffect } from 'react';
 const Main = () => {
   const [images, setImages] = useState([
     {
-      id: 1,
-      title: 'aasdasdasd',
+      id: uuidv4(),
+      title: 'police Duck',
       src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkeSqFaod7jFjHL5ZJXWJ9bV9QbqATMt9qWA&usqp=CAU',
     },
     {
-      id: 2,
-      title: '23asdfasdasd',
+      id: uuidv4(),
+      title: 'Roman Duck',
       src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzMWGZDeRHPoeU3U5BkbfZb673pBFXN12izg&usqp=CAU',
     },
   ]);
