@@ -1,0 +1,12 @@
+.active {
+  background-color: violet;
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.nav-item {
+  color: rgb(25, 125, 155);
+  text-decoration: none;
+}
