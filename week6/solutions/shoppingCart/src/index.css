@@ -1,0 +1,140 @@
+body {
+  /* background: #007398; */
+  font-family: sans-serif;
+  color: white;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 0 20%; */
+}
+
+.block {
+  text-align: center;
+  background: white;
+  border-radius: 3px;
+  /* padding: 20px; */
+  color: black;
+  /* margin: 20px; */
+  width: 100%;
+}
+
+.block > ul li {
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: left;
+}
+
+.block a.link {
+  color: cornflowerblue;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid cornflowerblue;
+  padding: 5px 10px;
+  margin: 20px;
+  display: inline-block;
+  border-radius: 3px;
+}
+
+/* EShop */
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2% 0;
+  padding: 2%;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.card-buttons,
+.cart-buttons {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-buttons button,
+.cart-buttons button {
+  background-color: darkslategray;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.card-buttons button:active,
+.cart-buttons button:active {
+  background-color: slategray;
+}
+
+.img-container {
+  height: 150px;
+}
+
+.img-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 5%;
+  color: white;
+  background-color: darkslategray;
+}
+
+.badge-wrapper {
+  position: relative;
+}
+
+.badge-wrapper .cart-icon {
+  font-size: 3rem;
+}
+
+.badge-wrapper > span {
+  position: absolute;
+  top: 40px;
+  left: -10px;
+  border: 1px solid red;
+  background-color: red;
+  padding: 6px;
+  border-radius: 50%;
+}
+
+.cart-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cart-row > .details {
+  width: 80%;
+}
+
+.cart-row > .cart-buttons {
+  width: 30%;
+}
+
+details {
+  text-align: left;
+  padding-left: 20px;
+}
