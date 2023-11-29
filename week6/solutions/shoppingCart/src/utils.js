@@ -1,16 +1,29 @@
 export const decrease = (cart, product) => {
-  // return new array
-  // dont forget to [...cart]
-  // check if you have the product and its not 0 then decrease it otherwise remove the product from the cart
-  console.log(`Decrease product with sku ${product.sku}`);
+  return cart.filter(cartProduct => {
+    if (cartProduct.sku === product.sku) {
+      cartProduct.qty--; // obj.qty = obj.qty - 1
+      if (cartProduct.qty === 0) {
+        return false;
+      }
+    }
+    return true;
+  });
 };
 
 export const increase = (cart, product) => {
-  // check if you have the product in the cart if yes then increase the qty otherwise add a new product to the cart and set the qty:1
-  // return new array
-  // dont forget to [...cart]
-  // {...product,qty:1}
-  console.log(`Increase product with sku ${product.sku}`);
+  if (cart.find(p => p.sku === product.sku)) {
+    // return cart.map(p => (p.sku === product.sku ? { ...p, qty: p.qty + 1 } : p));
+    return cart.map(p => {
+      if (p.sku === product.sku) {
+        return { ...p, qty: p.qty + 1 };
+      } else {
+        return p;
+      }
+    });
+  } else {
+    const newProduct = { ...product, qty: 1 };
+    return [...cart, newProduct];
+  }
 };
 
 export const getTotalPrice = cart => {
