@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 import './App.css';
 import { createClient } from 'contentful';
+import RichText from './components/RichText';
 function App() {
   const [books, setBooks] = useState([]);
 
@@ -28,6 +29,12 @@ function App() {
           <h2>{book.fields.title}</h2>
           <p>{book.fields.author}</p>
           <img src={book.fields.image.fields.file.url} alt="" />
+          <br />
+          {book.fields.images.map(image => (
+            <img key={image.sys.id} src={image.fields.file.url} alt="" />
+          ))}
+          <hr />
+          <RichText document={book.fields.blog} />
         </div>
       ))}
     </>
