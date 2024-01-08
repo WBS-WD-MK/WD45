@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Image Upload</h1>
+    <form action="/upload-profile-pic" enctype="multipart/form-data" method="POST">
+      <div>
+        <label>Select your profile picture:</label>
+        <input name="profile_pic" type="file" accept="image/*" />
+      </div>
+      <div><input type="submit" value="Upload" /></div>
+    </form>
+
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <form action="/upload-cat-pics" enctype="multipart/form-data" method="POST">
+      <div>
+        <label>Select your cat pictures:</label>
+        <input multiple="multiple" name="cat_pics" type="file" />
+      </div>
+      <div><input type="submit" value="Upload Cat Pics" /></div>
+    </form>
+  </body>
+</html>
