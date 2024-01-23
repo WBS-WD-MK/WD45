@@ -6,6 +6,7 @@ const cookieParser = require('cookie-parser');
 const connectDB = require('./config/db');
 const booksRouter = require('./routes/books');
 const authRouter = require('./routes/users');
+const adminRouter = require('./routes/admin');
 const PORT = process.env.PORT || 4000;
 const app = express();
 app.use(cors({ origin: process.env.FRONTEND_URL, credentials: true }));
@@ -14,6 +15,7 @@ app.use(express.json());
 // all routes should be registered after the global middlewares cors and express.json()
 app.use('/api/books', booksRouter);
 app.use('/auth', authRouter);
+app.use('/admin', adminRouter);
 // THE FOLLOWING BLOCK NEED TO BE AFTER ALL THE BACKEND ROUTES!!!!!!!!!!
 if (process.env.NODE_ENV === 'production') {
   //*Set static folder up in production
