@@ -1,19 +1,32 @@
 import axios from '../axiosInstance';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import io from 'socket.io-client';
+const socket = io(import.meta.env.VITE_SERVER_BASE_URL, { transports: ['websocket'] });
+import { useContext } from 'react';
+import { AuthContext } from '../context/Auth';
 
 const NewBook = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [year, setYear] = useState(0);
   const navigate = useNavigate();
+  const { user } = useContext(AuthContext);
   const handleSubmit = e => {
     e.preventDefault();
-    axios
-      .post(`/api/books`, { title, author, year })
-      .then(res => navigate('/'))
-      .catch(e => console.error(e));
+    // axios
+    //   .post(`/api/books`, { title, author, year })
+    //   .then(res => navigate('/'))
+    //   .catch(e => console.error(e));
+    socket.emit('createBook', { title, author, year, createdBy: user._id });
+    navigate('/');
   };
+  useEffect(() => {
+    return () => {
+      //disconnect
+      socket.disconnect();
+    };
+  }, []);
 
   return (
     <div>
