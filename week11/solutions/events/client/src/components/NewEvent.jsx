@@ -22,7 +22,7 @@ function NewEvent(props) {
     formData.append('location', location);
     formData.append('organizer', organizer);
     formData.append('image', image);
-    console.log('WHT', import.meta.env.VITE_SERVER_BASE_URL);
+  
     axios
       .post(`${import.meta.env.VITE_SERVER_BASE_URL}/api/events`, formData)
       .then(res => navigate('/'))
